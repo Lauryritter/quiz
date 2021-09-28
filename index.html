@@ -8,15 +8,23 @@
     <title>Javascript Quiz</title>
 </head>
 <body>
+    <header>
+        <a>
+            View high scores
+        </a>
+        <p>
+            Time: 0
+        </p>
+    </header>
     <!-- inserted main page to start quiz -->
-    <div class = "wrap">
-        <div class = "container">
-            <h2>Click button to start timer</h2>
-                <button id="start">Start</button>
-            <!-- inserted html for timer -->
-            <h2 class ="timer" style ="text-align: right;"></h2>
-                <div id ="side"></div>
+    <div class="wrap">
+        <div class="card">
+            <h2 class="card__title">Click button to start timer</h2>
+                <button class="card__button" id="start">Start</button>
+            <!-- inserted html for timer -->        
         </div>    
+        <h2 class="timer" style="text-align: right;"></h2>
+                <div id="side"></div>
     </div>    
     <script src="script.js"></script>
 </body>
