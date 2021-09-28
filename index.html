@@ -17,12 +17,22 @@
         </p>
     </header>
     <!-- inserted main page to start quiz -->
-    <div class="wrap">
-        <div class="card">
+    <div class="container">
+        <div id="question__container" class="hide"></div>
+        <!-- inserted html for question and answer buttons -->
+            <div id="question">Question</div>
+            <div id="answer__buttons" class="answer__grid">
+                <button class="button">Answer 1</button>
+                <button class="button">Answer 2</button>
+                <button class="button">Answer 3</button>
+                <button class="button">Answer 4</button>
+            </div>
+        <div class="controls">
             <h2 class="card__title">Click button to start timer</h2>
-                <button class="card__button" id="start">Start</button>
+                <button class="start__button button" id="start">Start</button>
+                <button class="next__button button hide" id="next">Next</button>
             <!-- inserted html for timer -->        
-        </div>    
+            
         <h2 class="timer" style="text-align: right;"></h2>
                 <div id="side"></div>
     </div>    
