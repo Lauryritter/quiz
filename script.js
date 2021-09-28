@@ -26,3 +26,36 @@
     // A scoring system
         // a place to store the score with initials.
     //A link to the timer to subtract time when questions is answered incorrectly
+
+//create interval
+var timerEl = document.querySelector(".timer");
+
+//selected element
+var sideEl = document.getElementById("side");
+
+//set starting time
+var timeLeft = 60;
+
+function setTimer(){
+    var timerInterval = setInterval(function(){
+        timeLeft--;
+        timerEl.textContent = timeLeft + " seconds to complete quiz.";
+
+        //stop timer
+        if (timeLeft === 0){
+            clearInterval(timerInterval);
+            sendText();
+        }
+    },1000);
+}
+
+//send text
+
+function sendText(){
+    timerEl.textContent ="Time is up!  Your score is ";
+
+}
+
+setTimer();
+
+
