@@ -27,70 +27,76 @@
         // a place to store the score with initials.
     //A link to the timer to subtract time when questions is answered incorrectly
    //create interval
-    var timerEl = document.querySelector(".timer");
-    //selected element
-    var sideEl = document.getElementById("side");
-    //set starting time
-    var timeLeft = 3;
+   var timerEl = document.querySelector(".timer");
+   //selected element
+   var sideEl = document.getElementById("side");
+   //set starting time
+   var timeLeft = 60;
 
-    //added arrays with dummy questions
-    var questions=[{
-        question: "What is the state capitol of Nevada?",
-        choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
-        answer: "Carson City"
-    },
-    {
-        question: "What is the state capitol of Nevada?",
-        choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
-        answer: "Carson City"
-    },
-    {
-        question: "What is the state capitol of Nevada?",
-        choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
-        answer: "Carson City"
-    },
-    {
-        question: "What is the state capitol of Nevada?",
-        choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
-        answer: "Carson City"
-    }]
+   
+   //added arrays with dummy questions
+   var questions=[{
+       question: "What is the state capitol of Nevada?",
+       choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
+       answer: "Carson City"
+   },
+   {
+       question: "What is the state capitol of Nevada?",
+       choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
+       answer: "Carson City"
+   },
+   {
+       question: "What is the state capitol of Nevada?",
+       choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
+       answer: "Carson City"
+   },
+   {
+       question: "What is the state capitol of Nevada?",
+       choices: ["Trilogy", "blank", "Las Vegas", "Carson City"],
+       answer: "Carson City"
+   }]
 
-    function loop(){
-        for (let i = 0; i < questions.length; i++) {
-            console.log (questions[i])
-            console.log (questions[i].choices[1])
-        }
-    }
-    loop()
+   function loop(){
+       for (let i = 0; i < questions.length; i++) {
+           answers = [];
+           for(answer in questions[i].answer){
 
-    var startEl = document.body.querySelector("#start");
-     console.log(startEl)   
-    function setTimer(){
-        var timerInterval = setInterval(function(){
-            timeLeft--;
-            timerEl.textContent = timeLeft + " seconds to complete quiz.";
+             )
+           }
+       }
+   }
+   loop()
 
-            //stop timer
-            if (timeLeft === 0){
-            clearInterval(timerInterval);
-            sendText();
-            }
-        },1000);
-        // console.log("hello")
-    }
+var element = document.getElementById('answer__buttons')
+
+element.addEventListener("click", () => {
+	});
+
+   var startEl = document.body.querySelector("#start");
+    console.log(startEl)   
+   function setTimer(){
+       var timerInterval = setInterval(function(){
+           timeLeft--;
+           timerEl.textContent = timeLeft + " seconds to complete quiz.";
+
+           //stop timer
+           if (timeLeft === 0){
+           clearInterval(timerInterval);
+           sendText();
+           }
+       },1000);
+       // console.log("hello")
+   }
 
 function startQuiz(){
-    setTimer()
-
-}
-
-
-//send text
-function sendText(){
-    timerEl.textContent ="Time is up!  Your score is ";
+   setTimer()
 
 }
 
 startEl.addEventListener("click", startQuiz);
+//send text
+function sendText(){
+   timerEl.textContent ="Time is up!  Your score is ";
 
+}
 

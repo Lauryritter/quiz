@@ -1,1 +1,1 @@
-# quiz
+I'm just really not getting the connection on how to link questions to the buttons and then have the output.  I've been working on this for 20 hours.  Just give me an incomplete.  I'm failing the class anyway.
